@@ -1,18 +1,3 @@
-// Copyright 2015-2016, Google, Inc.
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//   http://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
-// [START app]
 'use strict';
 
 var express = require('express');
@@ -36,7 +21,7 @@ controller.hears(['hello','hi'], 'direct_message,direct_mention,mention', functi
     name: 'robot_face',
   },function(err, res){
     if (err){
-      bot.botkit.log('Failed to add emoji reaction:(', err)
+      bot.botkit.log('Failed to add emoji', err)
     }
   })
 
@@ -55,13 +40,14 @@ var reply_with_attachments = {
   'text': 'This is a pre-text',
   'attachments': [
     {
-      'fallback': 'To be useful, I need you to invite me in a channel.',
-      'title': 'How can I help you?',
-      'text': 'To be useful, I need you to invite me in a channel ',
+      'fallback': 'Please check notification logic .',
+      'title': 'You can create a Bot?',
+      'text': 'Please check notification logic .',
       'color': '#7CD197'
     }
   ],
-  'icon_url': 'http://lorempixel.com/48/48'
+  //'icon_url': 'http://lorempixel.com/48/48',
+  'icon_emoji': ':sushi'
 }
 
 var channel = "D1FBT1UP2"
@@ -87,14 +73,12 @@ cron.start();
 //request events
 app.get('/', function (req, res) {
   bot.say({ channel: channel, text: "requestが来たよ! \n ```" + JSON.stringify(req.route) + " \n```"})
-  res.status(200).send('Hello, world!');
+  res.status(200).send('hello bots!');
 });
 
 
 
 // Start the server
 var server = app.listen(process.env.PORT || '8080', function () {
-  console.log('App listening on port %s', server.address().port);
-  console.log('Press Ctrl+C to quit.');
+  console.log('listen port %s', server.address().port);
 });
-// [END app]

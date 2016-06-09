@@ -1,21 +1,21 @@
 {
-  "name": "appengine-hello-world",
-  "description": "Simple Hello World Node.js sample for Google App Engine",
+  "name": "Qiitachan",
+  "description": "template a Bot for Google App Engine",
   "version": "0.0.1",
   "private": true,
   "license": "Apache Version 2.0",
-  "author": "Google Inc.",
+  "author": "Yusaku Senga",
   "engines": {
     "node": "~4.2"
-  },
-  "scripts": {
-    "start": "token=xoxb-49402285479-iVx9GUUsl4N477HCLholsGjD node app.js",
-    "monitor": "nodemon app.js",
-    "deploy": "gcloud preview app deploy"
   },
   "dependencies": {
     "botkit": "^0.2.0",
     "cron": "^1.1.0",
     "express": "^4.13.4"
+  },
+  "scripts": {
+    "start": "token=xoxb-49402285479-iVx9GUUsl4N477HCLholsGjD node app.js",
+    "monitor": "nodemon app.js",
+    "deploy": "gcloud preview app deploy"
   }
 }
