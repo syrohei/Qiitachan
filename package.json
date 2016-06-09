@@ -10,11 +10,14 @@
   },
   "dependencies": {
     "botkit": "^0.2.0",
+    "config": "^1.21.0",
     "cron": "^1.1.0",
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "jfs": "^0.2.6",
+    "request-promise": "^3.0.0"
   },
   "scripts": {
-    "start": "token="Your slacks access token"  node app.js",
+    "start": "node app.js",
     "monitor": "nodemon app.js",
     "deploy": "gcloud preview app deploy"
   }
