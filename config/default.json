@@ -1,5 +1,6 @@
 {
-  "token":"youre token",
-  "channel":"youre channel",
-  "store_path":"./"
+  "token":"your slack token",
+  "channel":"channel id or im id. example : D1FBT1UP3",
+  "store_path":"./",
+  "keyword":"solidity:blockchain:ethereum:dapps:bitcoin:smartcontract"
 }

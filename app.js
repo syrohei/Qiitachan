@@ -17,6 +17,7 @@ const Store = require("jfs");
 
 const token = config.token
 const channel = config.channel
+const keyword = config.keyword
 const store_path = config.store_path
 const Storage = new Store(store_path)
 
@@ -85,7 +86,7 @@ controller.hears(['all','ぽん'], 'direct_message,direct_mention,mention', (bot
 const cron = new CronJob({
   cronTime: '00 * * * * *',
   onTick: () => {
-    const url = "http://qiita.com/api/v2/items?page=1&per_page=20&query=solidity"
+    const url = `http://qiita.com/api/v2/items?page=1&per_page=20&query=${keyword}`
     rp(url)
       .then((new_data) => {
         Storage.get("qiita_items", (err, old_data) => {
