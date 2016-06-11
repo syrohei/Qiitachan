@@ -9,10 +9,12 @@
     "node": "~4.2"
   },
   "dependencies": {
+    "aa": "^0.1.36",
     "botkit": "^0.2.0",
     "config": "^1.21.0",
     "cron": "^1.1.0",
     "express": "^4.13.4",
+    "is-json": "^2.0.0",
     "jfs": "^0.2.6",
     "request-promise": "^3.0.0"
   },
