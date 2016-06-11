@@ -20,8 +20,7 @@ then check the path of SDK tools and enable command completion `gcloud`
 gcloud -v
 ```
 
-Configure Application
-Please check the configuration of your bot `config/default.json`
+To configure Application ,Please check the configuration file of your bot `config/default.json`
 ```
 {
   "token":"your slack token",  
@@ -45,6 +44,7 @@ Deploying GAE
 ```
 npm run deploy
 ```
+
 ## Modules
 - botkit https://github.com/howdyai/botkit
 - node-cron https://github.com/ncb000gt/node-cron
