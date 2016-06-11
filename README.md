@@ -4,7 +4,7 @@ This sample bot a Node.js app with deploying GAE [Google App Engine Managed VMs]
 
 ## Getting Started
 
-1. Download and install Google Cloud SDK [Google Cloud SDK](https://cloud.google.com/sdk/docs/).
+Download and install Google Cloud SDK [Google Cloud SDK](https://cloud.google.com/sdk/docs/).
 It has dependencies Python 2.7
 
 in Mac OSX
@@ -20,9 +20,8 @@ then check the path of SDK tools and enable command completion `gcloud`
 gcloud -v
 ```
 
-2. Configure Application
-### config/default.json
-Please check the configuration of your bot
+Configure Application
+Please check the configuration of your bot `config/default.json`
 ```
 {
   "token":"your slack token",  
@@ -32,23 +31,24 @@ Please check the configuration of your bot
 }
 ```
 
-3. Install node dependencies
+Install node dependencies
 ```
-npm Install
+npm install
 ```
 
-4. local running
+Local running
 ```
 npm start
 ```
 
-5. deploying GAE
+Deploying GAE
 ```
 npm run deploy
 ```
 ## Modules
 - botkit https://github.com/howdyai/botkit
 - node-cron https://github.com/ncb000gt/node-cron
+
 ## License
 Qiitachan is licensed under MIT license. Basically you can do whatever you want to with it
 
@@ -58,4 +58,5 @@ Qiitachan is licensed under MIT license. Basically you can do whatever you want 
 if you have a question a issue, please ask me email or github syrohei@gmail.com [@syrohei](https://github.com/syrohei)
 
 bitcoin: 1257U991WqSvhpS65NjMEoWH5UBwQH5N3V
+
 ethereum: 0xbf2b26c21c6a1b248d9c857be756fa3bf261aff1
