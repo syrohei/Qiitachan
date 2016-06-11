@@ -25,10 +25,15 @@ To configure Application ,Please check the configuration file of your bot `confi
 {
   "token":"your slack token",  
   "channel":"channel id or im id for bot notification. example : D1FBT1UP3",
-  "store_path":"./",  
+  "store_path":"./",  //
   "keyword":"solidity:blockchain:ethereum:dapps:bitcoin:smartcontract"
 }
 ```
+
+- `token` is  access token of your bot
+- `channel` is a id of channel or direct_messages id
+- `store_path` is localstorage path supported by botkit
+- `keyword` is a search text of Qiita items
 
 Install node dependencies
 ```
