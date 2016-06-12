@@ -1,6 +1,6 @@
 # Qiitachan
 
-This sample bot a Node.js app with deploying GAE [Google App Engine Managed VMs](https://cloud.google.com/appengine).
+Qiitachan is a sample bot a Node.js app with deploying GAE [Google App Engine Managed VMs](https://cloud.google.com/appengine).
 
 ## Getting Started
 
