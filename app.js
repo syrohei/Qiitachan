@@ -17,7 +17,7 @@ const CronJob = require('cron').CronJob;
 const cron = new CronJob({
   cronTime: '00 * * * * *',
   onTick: () => {
-    main.job(config.keyword)
+    main.job(config.channel, config.keyword)
   },
   start: false,
   timeZone: 'Asia/Tokyo'
