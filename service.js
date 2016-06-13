@@ -1,6 +1,7 @@
 /*eslint-env es6*/
 /*global require*/
 /*global module*/
+/*global console*/
 /*eslint require-yield: "error"*/
 /*eslint no-console: ["error", { allow: ["warn", "error","log"] }] */
 
@@ -12,10 +13,11 @@ const rp = require('request-promise')
 module.exports = {
   search_qiita(text){
     return new Promise((resolve, reject) => {
-      const url = `https://qiita.com/api/v2/items?page=1&per_page=20&query=${text}`
+      const url = `https://qiita.com/api/v2/items?page=1&per_page=20&query='${text}'`
       rp(url)
         .then((data) => {
           if (isJSON(data)){
+            console.log(url);
             resolve(JSON.parse(data))
           }else {
             reject(new Error("not json"))

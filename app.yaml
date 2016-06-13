@@ -1,4 +1,5 @@
 
+threadsafe: true
 runtime: nodejs
 entrypoint: npm start
 vm: true

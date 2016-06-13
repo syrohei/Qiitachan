@@ -1,7 +1,6 @@
 /*eslint-env es6*/
 /*global require*/
 /*global module*/
-/*global console*/
 /*eslint no-console: ["error", { allow: ["warn", "error","log"] }] */
 
 'use strict'
@@ -44,8 +43,13 @@ controller.hears(['hello','hi'], 'direct_message,direct_mention,mention', (bot, 
 controller.hears('s (.*)','direct_message,direct_mention,mention',(bot,message) => {
   const text = message.match[1]
   Service.search_qiita(text).then((data) => {
-    console.log(data)
-    return bot.reply(message,`${String(data[0].title)}\n\n${data[0].url}\n\n`);
+    data.forEach((item, i) => {
+      if (i < 5)
+      bot.say({
+        channel: message.channel,
+        text: item.title + "\n" + item.url
+      })
+    })
   })
 })
 
